@@ -31,10 +31,10 @@ if(dbResult.affectedRows === 1){
 
 });
 
-// validation
+// POST /users/login - login existing user
 
-// user bcrypt
-
-// POST/users/login
+router.post('/login', async (req,res) =>{
+    res.json('you are about to login');
+});
 
 module.exports = router;

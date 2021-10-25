@@ -11,10 +11,10 @@ header > h3{
 
 
 }
-header > a{
+form > a{
     text-decoration: none;
 }
-header > a:hover{
+form > a:hover{
     cursor: pointer;
     color: tomato;
 
@@ -42,5 +42,36 @@ main > h3{
 .logout > img:hover{
     transform: scale(1.1);
 }
+/*register/ login form*/
 
+form{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input{
+    font-family: monospace;
+    border-radius: 5px;
+    width: 300px;
+    border: 2px solid #76b1c7;
+    padding: 10px;
+    margin: 5px;
+
+}
+button{
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    width: 80px;
+    border-color: #458398;
+}
+button:hover{
+    transform: scale(1.05);
+
+}
 

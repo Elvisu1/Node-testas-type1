@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <title>Groups Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="./JS/main.js" defer></script>
+    <script src="./JS/register.js" defer></script>
 </head>
 <body>
 <header>
     <img src="https://cdn-icons-png.flaticon.com/512/438/438526.png">
     <h3>Split Right</h3>
-    <a href="login.html">Already have account</a>
+
 </header>
-<h1>Register</h1>
+
+
+<form id="register-form">
+    <h1>Register</h1>
+    <input id="fullName" name="full_name" type="text" placeholder="enter your full name">
+    <input id="email" type="email" name="email" placeholder="enter your email">
+    <input id="pass1" type="password" name="password" placeholder="enter password">
+    <input id="pass2" type="password" name="password" placeholder=" repeat  password">
+
+    <button type="submit" id="btn">Register</button>
+    <br>
+    <a href="login.html">Login Page</a>
+    <div class="error">
+
+    </div>
+
+
+</form>
+
+
+
 </body>
