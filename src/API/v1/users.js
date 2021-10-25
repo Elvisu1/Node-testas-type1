@@ -11,7 +11,7 @@ const router = express.Router();
 // POST /users/register - create new user
 router.post('/register',validateRegister, async (req, res)=> {
     const newUser = {
-        user_name: req.body.user_name,
+        full_name: req.body.full_name,
         email: req.body.email,
         password: hashValue(req.body.password),
     };

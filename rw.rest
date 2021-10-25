@@ -2,7 +2,7 @@ POST http://localhost:3000/users/register
 Content-Type: application/json
 
 {
-"full_name" : "Hanes Johnson",
-"email" : "Hanes@johnson.com",
+"full_name" : "Will Smith",
+"email" : "will@smith.com",
 "password" : "123456"
 }

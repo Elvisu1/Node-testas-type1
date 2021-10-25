@@ -10,6 +10,7 @@ async function dbAction(sql, dbData = []) {
         return dbResult;
     } catch (error){
         console.error('dbAction error', error.message);
+        console.log(error.message)
         return false;
     }
 }

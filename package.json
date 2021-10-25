@@ -1,7 +1,7 @@
 {
   "name": "5pamoka",
   "version": "1.0.0",
-  "description": "Book lsit in front and end",
+  "description": "split",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/server.js"
