@@ -16,6 +16,7 @@ app.use(morgan('common'));
 app.use(cors());
 app.use(express.json());
 
+
 app.get('/', async (req, res) => {
    res.send('hello')
 });
