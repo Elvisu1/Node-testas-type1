@@ -10,7 +10,7 @@ router.post('/new', async (req,res)=>{
     const {group_id, user_id} = req.body;
     const dbResult = await dbAction(sql, [group_id, user_id])
     if (dbResult === false){
-        return res.status(500).jason({error:'sideways'})
+        return res.status(500).json({error:'sideways'})
     }
     res.json({msg: "post created", dbResult });
 })

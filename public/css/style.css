@@ -1,0 +1,46 @@
+header >img{
+    width: 100px;
+    height: 100px;
+}
+header{
+    margin-top: 50px;
+    text-align: center;
+}
+header > h3{
+    font-family: "Courier New";
+
+
+}
+header > a{
+    text-decoration: none;
+}
+header > a:hover{
+    cursor: pointer;
+    color: tomato;
+
+}
+main > h3{
+    text-align: center;
+}
+.add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+
+}
+.add > input{
+    width: 500px;
+}
+.add > button{
+    width: 50px;
+}
+.logout > img{
+    width: 20px;
+    height: 20px;
+}
+.logout > img:hover{
+    transform: scale(1.1);
+}
+
+
