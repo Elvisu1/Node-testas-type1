@@ -23,8 +23,11 @@ router.post('/register',validateRegister, async (req, res)=> {
     if (dbResult === false){
         return res.status(500).json({error:'something wrong'})
     }
-
-    res.json({msg:'user registered', dbResult});
+if(dbResult.affectedRows === 1){
+    return res.json({msg:'user registered', newUser: newUser.email});
+}
+    console.log('no rows affected');
+     res.status(500).json({error:'something wrong'});
 
 });
 
