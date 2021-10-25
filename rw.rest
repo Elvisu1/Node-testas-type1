@@ -1,2 +1,8 @@
 POST http://localhost:3000/users/register
-Content-Type: a[[lication/json
+Content-Type: application/json
+
+{
+"full_name" : "Hanes Johnson",
+"email" : "Hanes@johnson.com",
+"password" : "123456"
+}
