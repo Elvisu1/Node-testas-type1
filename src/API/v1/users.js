@@ -1,7 +1,7 @@
 const express = require('express');
 const {hashValue, verifyHash} = require('../../utils/hashHelper');
-const {validateRegister} = require('../../utils/validateHelper');
-const {dbAction} = require("../../utils/dbHelper");
+const {validateRegister, validateLogin} = require('../../utils/validateHelper');
+const {dbAction, dbFail} = require("../../utils/dbHelper");
 // const mysql = require(`mysql2/promise`)
 
 
@@ -33,8 +33,13 @@ if(dbResult.affectedRows === 1){
 
 // POST /users/login - login existing user
 
-router.post('/login', async (req,res) =>{
-    res.json('you are about to login');
+router.post('/login',validateLogin, async (req,res) =>{
+const sql = 'SELECT * FROM users WHERE email = ?';
+const dbResult = await dbAction(sql,[req.body.email]);
+    if(dbResult.length !==1){
+        return dbFail(res, 'email does not exist', 400)
+    }
+    res.json({msg:'everything match',dbResult});
 });
 
 module.exports = router;
