@@ -1,0 +1,2 @@
+POST http://localhost:3000/users/register
+Content-Type: a[[lication/json
