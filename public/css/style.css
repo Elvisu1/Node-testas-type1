@@ -84,3 +84,20 @@ button:hover{
 
 }
 
+/*groups page card style*/
+
+.card{
+    padding: 10px;
+    background-color: #f8f8f8;
+    width: 150px;
+    text-align: center;
+    border: solid #458398 2px;
+}
+.groups-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+
+
