@@ -17,5 +17,11 @@ formEl.addEventListener('submit', async(e)=>{
     });
     const dataBack = await resp.json();
     console.log('dataBack', dataBack);
+    if(dataBack.msg === 'success'){
+        const {email, token} = dataBack.data;
+        localStorage.setItem('email', email)
+        localStorage.setItem('token', token);
 
+        window.location.href ='groupsPage.html'
+    }
 });

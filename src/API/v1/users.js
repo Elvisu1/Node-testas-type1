@@ -47,7 +47,6 @@ const dbResult = await dbAction(sql,[req.body.email]);
         return dbFail(res, 'password not match')
     }
     const token = jwt.sign({email: req.body.email}, jwtSecret);
-    console.log('token', token)
     const loggedUser = {
         email: req.body.email,
         token: token,
