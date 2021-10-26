@@ -3,8 +3,8 @@ POST http://localhost:3000/bills/new
 Content-Type: application/json
 
 {
-  "amount": 255,
-  "description": "food and drinks",
+  "amount": 200,
+  "description": "something",
   "group_id": 1
 }
 

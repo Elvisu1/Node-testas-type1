@@ -104,6 +104,28 @@ button:hover{
     justify-content: center;
 
 }
+/*bills style*/
+.lineTemplate {
+    margin: 10px auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.bills-container{
+
+
+}
+.line{
+    margin: 10px auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #e0e0e0;
+
+}
+
 
 /*single page style*/
 

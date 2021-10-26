@@ -27,17 +27,6 @@ router.get('/all', async (req,res)=>{
     dbSuccess(res,dbResult)
 
 });
-/// single group
-router.get('/', async (req,res) =>{
-    const sql = `
-    SELECT groups.id, groups.name
-    FROM groups
-    
-    `;
-    const dbResult = await dbAction(sql );
-    if (dbResult === false) return dbFail(res);
-    dbSuccess(res,dbResult)
-    dbSuccess(res)
-})
+
 
 module.exports = router;
