@@ -11,6 +11,15 @@ header > h3{
 
 
 }
+header > a{
+    text-decoration: none;
+}
+header > a:hover{
+    cursor: pointer;
+    color: tomato;
+
+}
+
 form > a{
     text-decoration: none;
 }

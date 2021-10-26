@@ -25,7 +25,9 @@ app.get('/', async (req, res) => {
 // routes
 const userRoutes = require('./API/v1/users')
 const accountsRoutes = require('./API/v1/accounts')
+const groupsRoutes = require('./API/v1/groups')
 // Use routes
 app.use('/users',userRoutes)
 app.use('/accounts',accountsRoutes)
+app.use('/groups',groupsRoutes)
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
