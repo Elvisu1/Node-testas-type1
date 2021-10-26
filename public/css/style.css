@@ -115,6 +115,15 @@ button:hover{
 .backBtn > a:hover{
     color: tomato;
 }
+/*error div style*/
+
+.errorDiv{
+    background-color: #ffb0a3;
+    color: #f8f8f8;
+    font-size: larger;
+    font-family: monospace;
+
+}
 
 
 

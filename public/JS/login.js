@@ -2,6 +2,9 @@ console.log('reg')
 const URL = 'http://localhost:3000/users';
 
 const formEl = document.getElementById('login-form')
+const errorDiv = document.querySelector('.errorDiv')
+
+
 
 
 formEl.addEventListener('submit', async(e)=>{
@@ -18,12 +21,22 @@ formEl.addEventListener('submit', async(e)=>{
     });
     const dataBack = await resp.json();
     console.log('dataBack', dataBack);
+    errorDiv.innerHTML = '';
+    errorDiv.innerHTML += '*'+dataBack.err
+
+
+
+
+
+
+
     if(dataBack.msg === 'success'){
         const {email, token} = dataBack.data;
-        localStorage.setItem('email', email)
+        localStorage.setItem('email', email);
         localStorage.setItem('token', token);
 
         window.location.href ='groupsPage.html'
+
 
 
 
