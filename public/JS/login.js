@@ -3,6 +3,7 @@ const URL = 'http://localhost:3000/users';
 
 const formEl = document.getElementById('login-form')
 
+
 formEl.addEventListener('submit', async(e)=>{
     e.preventDefault();
     console.log('sending');
@@ -23,5 +24,9 @@ formEl.addEventListener('submit', async(e)=>{
         localStorage.setItem('token', token);
 
         window.location.href ='groupsPage.html'
+
+
+
     }
 });
+

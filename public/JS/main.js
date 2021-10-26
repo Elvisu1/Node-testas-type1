@@ -4,6 +4,10 @@ const URL = 'http://localhost:3000/groups';
 // elements
 const groupsContainer = document.querySelector('.groups-container')
 
+
+
+
+
 // fetch all groups
 async function fetchData(urlPath){
     const resp = await fetch(`${URL}${urlPath}`);
@@ -32,6 +36,7 @@ async function getGroups(){
 // show group cards
 
 function generateGroups (dataArr, dest){
+
     dest.innerHTML = dataArr.map(
         (group) => `
          <div class="card">
