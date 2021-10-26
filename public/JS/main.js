@@ -8,6 +8,7 @@ const groupsContainer = document.querySelector('.groups-container')
 
 
 
+
 // fetch all groups
 async function fetchData(urlPath){
     const resp = await fetch(`${URL}${urlPath}`);

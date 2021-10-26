@@ -8,6 +8,7 @@ const groupsContainer = document.querySelector('.bills-container')
 
 
 
+
 // fetch all groups
 async function fetchData(urlPath = ''){
     const resp = await fetch(`${URL}${urlPath}`);
@@ -40,7 +41,7 @@ function generateBills (dataArr, dest){
     dest.innerHTML = dataArr.map(
         (bill) => `
         <div class="line">
-            <p>${bill.amount}</p>
+            <p>${bill.amount} $</p>
             <p>${bill.description}</p>
             <p>${bill.group_id}</p>
 
@@ -52,3 +53,5 @@ function generateBills (dataArr, dest){
     ).join('')
 
 }
+
+

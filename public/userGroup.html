@@ -5,6 +5,7 @@
     <title>Groups Page</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="JS/userGroup.js" defer></script>
+
 </head>
 <body>
 <header>
@@ -16,9 +17,9 @@
 <h1 style="text-align: center; margin: 50px " >Group Bills:</h1>
 <section class="one-group">
     <div class="lineTemplate">
-        <p>ID</p>
-        <p>Description</p>
         <p>Amount</p>
+        <p>Description</p>
+        <p>Group Id:</p>
 
     </div>
     <div class="bills-container">
@@ -44,12 +45,16 @@
 
 
 
-        <input type="text"placeholder="Amount">
-        <input type="text"placeholder="Description">
+    <input id="amount" name="amount"type="text"placeholder="Amount">
+    <input id="description" name="description"type="text"placeholder="Description">
+    <input id="id" name="id"type="number" placeholder="Id">
+
+
+
 
 
 <div>
-    <button style="text-decoration: none">Add</button>
+    <button type="submit" style="text-decoration: none">Add</button>
 
 </div>
         <div class="backBtn" style="padding-top: 20px">
