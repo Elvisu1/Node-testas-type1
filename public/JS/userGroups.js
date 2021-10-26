@@ -1,4 +1,4 @@
-console.log('front');
+console.log('user groups');
 const URL = 'http://localhost:3000/groups';
 
 // elements
@@ -9,7 +9,7 @@ const groupsContainer = document.querySelector('.groups-container')
 
 
 // fetch all groups
-async function fetchData(urlPath){
+async function fetchData(urlPath = ''){
     const resp = await fetch(`${URL}${urlPath}`);
     const dataFromResp = await  resp.json();
     return dataFromResp
@@ -24,7 +24,7 @@ init();
 
 async function getGroups(){
 
-    const data = await fetchData('/all')
+    const data = await fetchData()
     // console.log('data', data)
     if(data.msg === 'success'){
         return data.data;
@@ -50,4 +50,3 @@ function generateGroups (dataArr, dest){
     ).join('')
 
 }
-

@@ -1,22 +1,12 @@
-#POST http://localhost:3000/users/register
-#Content-Type: application/json
-#
-#{
-#"full_name" : "Bill Clinton",
-#"email" : "bill@clinton.com",
-#"password" : "123456"
-#}
 
-##
-POST http://localhost:3000/accounts/new
+POST http://localhost:3000/bills/new
 Content-Type: application/json
 
 {
-  "group_id": 3,
-  "user_id": 5
-
+  "amount": 255,
+  "description": "food and drinks",
+  "group_id": 1
 }
 
-###
-GET http://localhost:3000/groups/all
+
 

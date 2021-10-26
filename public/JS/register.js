@@ -4,6 +4,7 @@ const URL = 'http://localhost:3000/users';
 const formEl = document.getElementById('register-form')
 const errorDiv = document.querySelector('.errorDiv')
 
+
 formEl.addEventListener('submit', async(e)=>{
 e.preventDefault();
     console.log('sending');
@@ -20,6 +21,7 @@ e.preventDefault();
     console.log('dataBack', dataBack);
     errorDiv.innerHTML = '';
     errorDiv.innerHTML += '*'+dataBack.error[0].errorMsg
+
 
 
 
