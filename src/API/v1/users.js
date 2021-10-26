@@ -2,6 +2,8 @@ const express = require('express');
 const {hashValue, verifyHash} = require('../../utils/hashHelper');
 const {validateRegister, validateLogin} = require('../../utils/validateHelper');
 const {dbAction, dbFail, dbSuccess} = require("../../utils/dbHelper");
+const jwt = require('jsonwebtoken');
+const {jwtSecret} = require('../../config')
 // const mysql = require(`mysql2/promise`)
 
 
@@ -41,11 +43,16 @@ const dbResult = await dbAction(sql,[req.body.email]);
         return dbFail(res, 'email does not exist', 400)
     }
     // check password
-    if (verifyHash(req.body.password, dbResult[0].password)){
-        return dbSuccess(res,dbResult);
+    if (!verifyHash(req.body.password, dbResult[0].password)){
+        return dbFail(res, 'password not match')
     }
-    dbFail(res, 'password not match');
-
+    const token = jwt.sign({email: req.body.email}, jwtSecret);
+    console.log('token', token)
+    const loggedUser = {
+        email: req.body.email,
+        token: token,
+    }
+    dbSuccess(res,loggedUser);
 
 });
 
